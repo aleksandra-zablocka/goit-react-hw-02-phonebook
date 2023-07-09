@@ -23,9 +23,9 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.contacts);
+    // console.log(this.state.contacts);
     return (
-      <div>
+      <div className="book">
         <Form addContact={this.addContact} />
         <ContactList
           contacts={this.state.contacts}

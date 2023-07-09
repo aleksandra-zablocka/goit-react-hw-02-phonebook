@@ -1,12 +1,13 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import ContactEl from 'components/ContactEl/ContactEl';
+import css from './ContactList.module.css';
 
 class ContactList extends Component {
   render() {
     return (
-      <div>
-        <h2>Contacts</h2>;
+      <div className={css.contactList}>
+        <h2>Contacts</h2>
         {/* <ul>
           {this.props.contacts.map(contact => (
             <li key={contact.id}>
@@ -18,15 +19,15 @@ class ContactList extends Component {
           ))}
         </ul> */}
 
-<ul>
+        <ul>
           {this.props.contacts.map(contact => (
-            <ContactEl key={contact.id}
-            contact={contact}
-            deleteContact={this.props.deleteContact}
+            <ContactEl
+              key={contact.id}
+              contact={contact}
+              deleteContact={this.props.deleteContact}
             />
           ))}
         </ul>
-
       </div>
     );
   }

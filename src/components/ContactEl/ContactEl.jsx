@@ -1,14 +1,17 @@
 import React from 'react';
+import css from './ContactEl.module.css';
 
-const ContactEl = ({contact, deleteContact}) => {
-    const {id, name, number} = contact;
+const ContactEl = ({ contact, deleteContact }) => {
+  const { id, name, number } = contact;
 
-    return (
-        <li>
-            {name}: {number} {' '}
-            <button onClick={() => deleteContact(id)}>Delete contact</button>
-        </li>
-    )
-}
+  return (
+    <li>
+      <p>{name}: {number}{' '}</p>
+      <button className={css.deleteBtn} onClick={() => deleteContact(id)}>
+        Delete
+      </button>
+    </li>
+  );
+};
 
 export default ContactEl;

@@ -41,11 +41,11 @@ handleSubmit = e => {
     const { name, contacts, number } = this.state;
 
     return (
-      <div>
+      <div className={css.phonebook}>
         <h2>Phonebook</h2>
-        <form onSubmit={this.handleSubmit}>
+        <form className={css.form} onSubmit={this.handleSubmit}>
           <label htmlFor="name">Name</label>
-          <input
+          <input className={css.input}
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -55,7 +55,7 @@ handleSubmit = e => {
             required
           />
           <label htmlFor="number">Number</label>
-          <input
+          <input className={css.input}
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -64,7 +64,7 @@ handleSubmit = e => {
             onChange={this.handleChange}
             required
           />
-          <button type="submit">Add contact</button>
+          <button className={css.submitBtn} type="submit">Add contact</button>
         </form>
       </div>
     );

@@ -1,0 +1,24 @@
+.deleteBtn {
+  border: 1px solid rgb(94, 42, 42);
+  cursor: pointer;
+  font-style: italic;
+  font-size: 12px;
+    transition: box-shadow 300ms;
+}
+
+.deleteBtn:hover {
+  box-shadow: rgba(128, 79, 70, 0.378) 0px 2px 5px 0px;
+  border: 1px solid rgb(48, 21, 21);
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  }
+
+p {
+  font-size: 16px;
+  margin: 0;
+}
