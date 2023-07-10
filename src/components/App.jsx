@@ -5,7 +5,7 @@ import ContactList from './ContactList/ContactList';
 class App extends Component {
   state = {
     contacts: [],
-    name: '',
+    filter: '',
   };
 
   addContact = newContact => {
@@ -15,18 +15,12 @@ class App extends Component {
   };
 
   deleteContact = id => {
-    // this.setState(prevState => {
-    //   const updatedContacts = [...prevState.contacts];
-    //   updatedContacts.splice(index, 1);
-    //   return { contacts: updatedContacts };
-    // });
     this.setState(prevState => ({
-      contacts: prevState.contacts.filter(contact => contact.id !==id),
-    }))
+      contacts: prevState.contacts.filter(contact => contact.id !== id),
+    }));
   };
 
   render() {
-    // console.log(this.state.contacts);
     return (
       <div className="book">
         <Form addContact={this.addContact} />

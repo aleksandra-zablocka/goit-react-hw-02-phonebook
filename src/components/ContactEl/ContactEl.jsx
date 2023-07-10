@@ -20,7 +20,7 @@ ContactEl.propTypes = {
   contact: PropTypes.shape({
     id: PropTypes.string,
     name: PropTypes.string,
-    number: PropTypes.number,
+    number: PropTypes.string,
   }),
   deleteContact: PropTypes.func,
 };
