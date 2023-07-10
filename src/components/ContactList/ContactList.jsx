@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 import ContactEl from 'components/ContactEl/ContactEl';
 import css from './ContactList.module.css';
 
@@ -8,6 +8,7 @@ class ContactList extends Component {
     return (
       <div className={css.contactList}>
         <h2>Contacts</h2>
+        <p>Name, number</p>
         {/* <ul>
           {this.props.contacts.map(contact => (
             <li key={contact.id}>
@@ -32,5 +33,16 @@ class ContactList extends Component {
     );
   }
 }
+
+ContactList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      number: PropTypes.number,
+    })
+  ),
+  deleteContact: PropTypes.func,
+};
 
 export default ContactList;

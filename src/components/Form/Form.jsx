@@ -71,4 +71,8 @@ handleSubmit = e => {
   }
 }
 
+Form.propTypes = {
+  addContact: PropTypes.func,
+};
+
 export default Form;
