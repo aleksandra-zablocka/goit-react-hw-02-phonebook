@@ -4,7 +4,7 @@
   background-color: #f2f2f2;
   cursor: pointer;
   font-style: italic;
-  font-size: 12px;
+  font-size: 11px;
   transition: box-shadow 300ms;
 }
 
@@ -23,7 +23,11 @@ li {
   margin-bottom: 10px;
 }
 
+li:last-child {
+  margin-bottom: 0;
+}
+
 p {
-  font-size: 16px;
+  font-size: 12px;
   margin: 0;
 }
