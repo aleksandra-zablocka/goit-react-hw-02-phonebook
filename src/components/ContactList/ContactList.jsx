@@ -29,6 +29,7 @@ class ContactList extends Component {
         <h2>Contacts</h2>
         <Filter onFilterChange={this.handleFilterChange} filter={filter} />
         <p className={css.label}>Name, number</p>
+        {filteredContacts.length > 0 ? (
         <ul>
           {filteredContacts.map(contact => (
             <ContactEl
@@ -37,7 +38,7 @@ class ContactList extends Component {
               deleteContact={deleteContact}
             />
           ))}
-        </ul>
+        </ul>) : (<p className={css.noContacts}>No contacts available</p>)}
       </div>
     );
   }
