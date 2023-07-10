@@ -38,7 +38,7 @@ handleSubmit = e => {
 }
 
   render() {
-    const { name, contacts, number } = this.state;
+    const { name, number } = this.state;
 
     return (
       <div className={css.phonebook}>

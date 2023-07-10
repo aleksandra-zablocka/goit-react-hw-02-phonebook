@@ -14,12 +14,15 @@ class App extends Component {
     }));
   };
 
-  deleteContact = index => {
-    this.setState(prevState => {
-      const updatedContacts = [...prevState.contacts];
-      updatedContacts.splice(index, 1);
-      return { contacts: updatedContacts };
-    });
+  deleteContact = id => {
+    // this.setState(prevState => {
+    //   const updatedContacts = [...prevState.contacts];
+    //   updatedContacts.splice(index, 1);
+    //   return { contacts: updatedContacts };
+    // });
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(contact => contact.id !==id),
+    }))
   };
 
   render() {
