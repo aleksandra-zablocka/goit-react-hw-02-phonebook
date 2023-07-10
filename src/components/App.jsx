@@ -3,10 +3,10 @@ import Form from './Form/Form';
 import ContactList from './ContactList/ContactList';
 
 class App extends Component {
-  state = {
-    contacts: [],
-    filter: '',
-  };
+  // state = {
+  //   contacts: [],
+  //   filter: '',
+  // };
 
   state = {
     contacts: [
