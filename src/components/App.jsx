@@ -25,7 +25,7 @@ class App extends Component {
 
     const doesContactExist = contacts.some(
       contact =>
-        contact.id === newContact.is || contact.name === newContact.name
+        contact.id === newContact.id || contact.name === newContact.name
     );
 
     if (doesContactExist) {
